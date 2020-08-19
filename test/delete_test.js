@@ -19,6 +19,8 @@ describe("Deleting a user", () => {
       });
   });
 
+  /* collection.remove is deprecated. 
+  Use deleteOne, deleteMany, or bulkWrite instead. */
   it("class method remove", (done) => {
     // remove a bunch of records with some given criteria
     User.remove({ name: "Joe" })
@@ -28,6 +30,7 @@ describe("Deleting a user", () => {
         done();
       });
   });
+
   it("class method findAndRemove", (done) => {
     User.findOneAndRemove({ name: "Joe" })
       .then(() => User.findOne({ name: "Joe" }))
