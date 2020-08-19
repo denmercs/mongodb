@@ -4,7 +4,7 @@ const User = require("../src/user");
 describe("Updating records", () => {
   let joe;
   beforeEach((done) => {
-    joe = new User({ name: "Joe" });
+    joe = new User({ name: "Joe", postCount: 0 });
     joe.save().then(() => done());
   });
 
@@ -24,8 +24,19 @@ describe("Updating records", () => {
   it("A model class update one record", (done) => {
     assertName(User.findOneAndUpdate({ name: "Joe" }, { name: "Alex" }), done);
   });
+
   it("A model class update can find a record with an ID and update", (done) => {
     assertName(User.findByIdAndUpdate(joe._id, { name: "Alex" }), done);
+  });
+
+  it("A user can have their postcount incremented by 1", (done) => {
+    // mongo update modifier
+    User.update({ name: "Joe" }, { $inc: { postCount: 1 } })
+      .then(() => User.findOne({ name: "Joe" }))
+      .then((user) => {
+        assert(user.postCount === 1);
+        done();
+      });
   });
 });
 
