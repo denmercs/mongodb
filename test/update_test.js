@@ -4,7 +4,7 @@ const User = require("../src/user");
 describe("Updating records", () => {
   let joe;
   beforeEach((done) => {
-    joe = new User({ name: "Joe", postCount: 0 });
+    joe = new User({ name: "Joe", likes: 0 });
     joe.save().then(() => done());
   });
 
