@@ -4,3 +4,4 @@ Working on MongoDB
 - working on the schematic diagram tutorial
 - learning on middleware
 - working on testing
+- labor day weekend
