@@ -5,3 +5,4 @@ Working on MongoDB
 - learning on middleware
 - working on testing
 - labor day weekend
+- working on the tutorial (challenge)
