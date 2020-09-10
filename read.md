@@ -6,3 +6,4 @@ Working on MongoDB
 - working on testing
 - labor day weekend
 - working on the tutorial (challenge)
+- still working on the video
