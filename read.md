@@ -7,3 +7,4 @@ Working on MongoDB
 - labor day weekend
 - working on the tutorial (challenge)
 - still working on the video
+- lesson 2 on the video
