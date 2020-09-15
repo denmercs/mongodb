@@ -8,3 +8,4 @@ Working on MongoDB
 - working on the tutorial (challenge)
 - still working on the video
 - lesson 2 on the video
+- working on backend
